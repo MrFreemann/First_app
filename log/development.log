@@ -132,3 +132,4 @@ Served asset /jquery_ujs.js - 200 OK (11ms)
 
 Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-11-04 10:45:02 +0200
 Served asset /static_pages.js - 200 OK (4ms)
+Connecting to database specified by database.yml

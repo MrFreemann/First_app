@@ -1,12 +1,16 @@
 require 'spec_helper'
 
-describe "StaticPages" do
+	describe "StaticPages" do
   
-  describe "Home page" do
-    it "should have the content 'Sample App'" do
-      visit '/static_pages/home'
-      page.should have_content('Sample_App')
-    end
-  end
-  
+	subject { page }
+
+	describe "Home page" do
+	   before { visit root_path }
+	   
+	   it "should have the content 'Sample App'" do
+	      visit '/home'
+	      page.should have_content('Impressbox first steps')
+	   end
+	end
+
 end

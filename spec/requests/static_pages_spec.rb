@@ -8,8 +8,9 @@ require 'spec_helper'
 	   before { visit root_path }
 	   
 	   it "should have the content 'Sample App'" do
-	      visit '/home'
-	      page.should have_content('Impressbox first steps')
+	      visit home_path
+	      it { should have_content('Impressbox first steps') }
+	      it { should have_selector('title', text: full_title('Sign up')) }
 	   end
 	end
 

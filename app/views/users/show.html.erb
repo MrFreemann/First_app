@@ -1,1 +1,13 @@
-<%= @user.name %>, <%= @user.email %>
+<!-- <%= @user.name %>, <%= @user.email %> -->
+
+<% provide(:title, @user.name) %>
+
+<div class="content">
+	<h1>
+		<%= gravatar_for @user, size: 60 %>
+		<%= @user.name%>
+	</h1>
+
+	<p>Find me in app/views/static_pages/home.html.erb</p>
+</div>
+

@@ -1,7 +1,84 @@
+@import "bootstrap";
 
 body {
-  width: 100%;
-  margin: 22px;
-  height: 100%;
-  background-color: #EEE;
+   width: 100%;
+	margin: 22px;
+	height: 100%;
+	background: image-url("main-bg.jpg") repeat;
+	padding-top: 60px;
+
+	div.header {
+		zoom: 1;
+		position: fixed;
+		z-index: 900;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 54px;
+		background: image-url("header-bg-front.jpg") no-repeat, image-url("header-bg-back.jpg") repeat-x;
+		background-position: top center, top left;
+		box-shadow: 3px 2px 5px lightgray;
+		-moz-box-shadow: 3px 2px 5px lightgray;
+		-webkit-box-shadow: 3px 2px 5px lightgray;
+
+		.header:after {
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+
+		nav {
+			font: bold 16px/26px Arial;
+			height: 50px;
+
+			ul {
+				display: inline;
+				list-style-type: none;
+				
+				li {
+					float: left;
+					margin: 0 10px;
+
+					a {
+						text-decoration: none;
+						color: #000;
+						&:hover {
+							color: #999;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	div.inputs-block {
+		inputs-block: after {
+			content: ".";
+		   display: block;
+		   clear: both;
+		   visibility: hidden;
+		   line-height: 0;
+		   height: 0;
+		}
+	}
+
+	#error_explanation {
+		ul {
+			list-style-type: none;
+			color: #f00;
+			margin: 0 0 15px 0;
+		}
+	}
+
+	input.btn, input.btn-large {
+		width: 221px;
+	}
+
+	.field_with_errors {
+		@extend .control-group;
+		@extend .error;
+	}
 }
+

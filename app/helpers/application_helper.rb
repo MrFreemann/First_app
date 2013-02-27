@@ -1,3 +1,5 @@
+#require 'spec_helper'
+
 module ApplicationHelper
   
   def full_title(page_title)
@@ -9,3 +11,4 @@ module ApplicationHelper
     end
   end
 end
+
